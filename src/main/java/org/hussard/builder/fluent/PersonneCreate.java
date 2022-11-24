@@ -2,7 +2,7 @@ package org.hussard.builder.fluent;
 
 import java.time.LocalDate;
 
-public class PersonneCreate implements PersonneFluent, PersonneFluent.Prenom, PersonneFluent.Age, PersonneFluent.Create {
+class PersonneCreate implements PersonneFluent, PersonneFluent.Prenom, PersonneFluent.Age, PersonneFluent.Create {
     private String nom;
     private String prenom;
     private LocalDate age;

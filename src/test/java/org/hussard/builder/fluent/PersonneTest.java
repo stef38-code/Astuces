@@ -21,17 +21,4 @@ class PersonneTest {
         assertThat(personne.getAge()).isEqualTo(LocalDate.now().minusYears(18));
     }
 
-    @Test
-    @DisplayName("Creation d'une personne avec double accès à une propriété")
-    void build_KO() {
-        Personne personne = Personne.aNew()
-                .nom("O 'Connell")
-                .prenom("Reilly")
-                .age(LocalDate.now().minusYears(18))
-                .create();
-        //Le test ci-dessous n'est plus bon
-        assertThat(personne.getNom()).isEqualTo("O 'Connell");
-        assertThat(personne.getPrenom()).isEqualTo("Reilly");
-        assertThat(personne.getAge()).isEqualTo(LocalDate.now().minusYears(18));
-    }
 }
